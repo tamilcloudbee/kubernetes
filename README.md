@@ -34,6 +34,9 @@ else
     echo "Swap is already off."
 fi
 
+# Turn off swap permanently by commenting the line containing swap in /etc/fstab
+sudo sed -i '/swap/s/^/#/' /etc/fstab
+
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
