@@ -8,7 +8,7 @@
 | node2   |  172.51.51.70 | Ubuntu 24.04 LTS Server | 8  | 2 |
 
 
-### The following Block is common for all Nodes
+### The following Block 1 & Block 2 is common for all Nodes
 ### MOTE change / Modify the host_name value when running the following block in different machines
 
 ### Block 1
