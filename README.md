@@ -9,7 +9,7 @@
 
 
 ### The following Block 1 & Block 2 is common for all Nodes
-### MOTE change / Modify the host_name value when running the following block in different machines
+### NOTE : Change / Modify the host_name value when running the following block in different machines
 
 ### Block 1
 ```
