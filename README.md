@@ -38,7 +38,7 @@ fi
 sudo sed -i '/swap/s/^/#/' /etc/fstab
 
 # Disable Firewall
-ufw disable
+sudo ufw disable
 
 
 sudo groupadd docker
