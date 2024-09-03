@@ -24,6 +24,17 @@ fi
 sudo hostnamectl set-hostname kmaster
 sudo timedatectl set-timezone Asia/Kolkata
 
+# check whether Swap is on or not - turn off swap if it is ON
+
+if sudo swapon --show | grep -q .; then
+    echo "Swap is active. Turning it off..."
+    sudo swapoff -a
+    echo "Swap has been turned off."
+else
+    echo "Swap is already off."
+fi
+
+
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
