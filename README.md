@@ -11,6 +11,7 @@
 ### The following Block is common for all Nodes
 ### MOTE change / Modify the host_name value when running the following block in different machines
 
+### Block 1
 ```
 host_name="kmaster"
 USER=$(whoami)
@@ -31,6 +32,10 @@ newgrp docker
 ## Install Docker (CE) in all the nodes 
 
 ### Follow installation steps given in the followin Docker website
+
+### Reference : https://docs.docker.com/engine/install/ubuntu/
+
+### Block 2
 
 ```
 # Add Docker's official GPG key:
