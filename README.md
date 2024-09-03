@@ -13,7 +13,7 @@
 
 ### Block 1
 ```
-host_name="kmaster"
+read -p "Enter the hostname to be set for this computer: " host_name
 USER=$(whoami)
 if ! sudo grep -q "^$USER ALL=(ALL) NOPASSWD:ALL" /etc/sudoers; then
     echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
