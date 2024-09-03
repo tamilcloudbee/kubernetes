@@ -1,5 +1,5 @@
 # kubernetes
-## Installing kubernetes in Ubuntu 22.04 LTS Server
+## Installing kubernetes in Ubuntu 24.04 LTS Server
 
 | Hostname   | IP address  | OS Verion  | RAM | CPU |
 |------------|------------|------------|------------|------------|
