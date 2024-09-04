@@ -136,3 +136,7 @@ sudo apt update && sudo apt install kubelet kubeadm kubectl -y
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 
 ```
+### output for the above command 
+
+![Kubernetes Cluster Initialization](images/1.kubeadm-init-cluster.jpg)
+
