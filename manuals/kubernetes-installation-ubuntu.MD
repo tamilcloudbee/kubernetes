@@ -111,3 +111,20 @@ sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/c
 sudo systemctl restart containerd
 
 ```
+
+## Install kubectl kubeadm kubelet
+
+### Block 4 ( Perform the following steps in all 3 Nodes )
+
+### Reference https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management
+
+```
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | 
+
+sudo gpg --dearmor -o /etc/apt/keyrings/k8s.gpg
+echo 'deb [signed-by=/etc/apt/keyrings/k8s.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/k8s.list
+
+sudo apt update && sudo apt install kubelet kubeadm kubectl -y
+
+
+```
