@@ -194,7 +194,7 @@ kubectl get nodes
 
 
 ```
-![Kubeadm join node 1 and node 2](../images/kubeadm-get-nodes.jpg)
+![Kubeadm join node 1 and node 2](../images/kubectl-get-nodes.jpg)
 
 
 
