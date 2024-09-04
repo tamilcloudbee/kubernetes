@@ -140,3 +140,5 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 
 ![Kubernetes Cluster Initialization](images/1.kubeadm-init-cluster.jpg)
 
+![Kubernetes Cluster Initialization](<img src="images/1.kubeadm-init-cluster.jpg" alt="Kubernetes Cluster Initialization" width="600"/>
+)
