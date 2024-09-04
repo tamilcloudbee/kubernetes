@@ -140,6 +140,7 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 
 ![Kubernetes Cluster Initialization](../images/kubeadm-init-cluster.jpg)
 
+## Cluster Initialized Result
 ![Kubernetes Cluster Initialization Result](../images/kubeadm-init-result.jpg)
 
 ## The Last screehot shows the message the Kubernetes cluster has been initialized
@@ -171,6 +172,32 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 ### After the above command run the following command in kubernetes master to view the pods running in 
 
 ![Kubectl get pods After Flannel network](../images/kubectl-get-pods-after-flannel.jpg)
+
+## Run the following command on the worker nodes (node1 and node2 in my setup) to join the worker nodes to the kubernetes master / cluster.
+
+## Refer your output which you got when you initialized the cluster
+
+
+```
+sudo kubeadm join 172.51.51.50:6443 --token tbqv3x.4ak1wnycmkc071dk \
+	--discovery-token-ca-cert-hash sha256:9dfe000f5e3a7c0578fb6e609a104f23260a4c51dd0df8ee2a7e426ebcbac70f 
+
+```
+
+![Kubeadm join node 1 and node 2](../images/kubeadm-join.jpg)
+
+### After running the above command in node1 and node2 , run the following command in kubernetes master
+
+```
+
+kubectl get nodes
+
+
+```
+![Kubeadm join node 1 and node 2](../images/kubeadm-get-nodes.jpg)
+
+
+
 
 
 
