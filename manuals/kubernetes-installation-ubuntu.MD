@@ -142,4 +142,35 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 
 ![Kubernetes Cluster Initialization Result](../images/kubeadm-init-result.jpg)
 
+## The Last screehot shows the message the Kubernetes cluster has been initialized
+
+### To start using your cluster, you need to run the following as a regular user in the kubernetes master node:
+
+```
+
+
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+```
+
+## You should now deploy a pod network to the cluster.
+### Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+### Refer the link above there are alot of addons available , i am going to use "flannel" networking in this demo run the following command in the kubernetes master node
+
+```
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+```
+![Kubernetes Cluster Flannel network](../images/kubectl-flannel.jpg)
+
+### After the above command run the following command in kubernetes master to view the pods running in 
+
+![Kubectl get pods After Flannel network](../imageskubectl-get-pods-after-flannel.jpg)
+
+
 
