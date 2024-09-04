@@ -189,12 +189,10 @@ sudo kubeadm join 172.51.51.50:6443 --token tbqv3x.4ak1wnycmkc071dk \
 ### After running the above command in node1 and node2 , run the following command in kubernetes master
 
 ```
-
 kubectl get nodes
-
-
 ```
-![Kubeadm join node 1 and node 2](../images/kubectl-get-nodes.jpg)
+
+![Kubectl get nodes after join](../images/kubectl-get-nodes.jpg)
 
 
 
