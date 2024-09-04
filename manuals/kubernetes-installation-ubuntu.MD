@@ -170,7 +170,7 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 
 ### After the above command run the following command in kubernetes master to view the pods running in 
 
-![Kubectl get pods After Flannel network](../imageskubectl-get-pods-after-flannel.jpg)
+![Kubectl get pods After Flannel network](../images/kubectl-get-pods-after-flannel.jpg)
 
 
 
