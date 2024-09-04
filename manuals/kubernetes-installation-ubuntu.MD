@@ -194,6 +194,8 @@ kubectl get nodes
 
 ![Kubectl get nodes after join](../images/kubectl-get-nodes.jpg)
 
+### Kubernetes cluster hasbeen configured and node1 and node2 has been joined to the cluster.
+
 
 
 
