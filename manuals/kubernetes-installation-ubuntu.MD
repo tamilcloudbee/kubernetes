@@ -8,10 +8,10 @@
 | node2   |  172.51.51.70 | Ubuntu 24.04 LTS Server | 8  | 2 |
 
 
-#### The following Block 1 & Block 2 & Block 3 & Block 3 is common for all 3 Nodes
+#### The following Block 1 & Block 2 & Block 3 & Block 4 is common for all 3 Nodes
 #### NOTE : Change / Modify the host_name value when running the following block in different machines
 
-### Block 1
+### Block 1 ( Perform the following steps in all 3 Nodes )
 ```
 read -p "Enter the hostname to be set for this computer: " host_name
 USER=$(whoami)
@@ -68,7 +68,7 @@ EOT
 
 #### Reference : https://docs.docker.com/engine/install/ubuntu/
 
-### Block 2
+### Block 2 ( Perform the following steps in all 3 Nodes )
 
 ```
 # Add Docker's official GPG key:
