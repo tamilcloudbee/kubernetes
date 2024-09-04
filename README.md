@@ -8,7 +8,7 @@
 | node2   |  172.51.51.70 | Ubuntu 24.04 LTS Server | 8  | 2 |
 
 
-### The following Block 1 & Block 2 is common for all Nodes
+### The following Block 1 & Block 2 & Block 3 is common for all 3 Nodes
 ### NOTE : Change / Modify the host_name value when running the following block in different machines
 
 ### Block 1
@@ -88,5 +88,26 @@ sudo apt-get update
 
  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
+
+```
+
+## Install and Configure Containerd
+
+### Block 3 ( Perform the following steps in all 3 Nodes )
+
+```
+sudo apt install -y curl gnupg2 software-properties-common apt-transport-https ca-certificates
+
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/containerd.gpg 
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+sudo apt update && sudo apt install containerd.io -y
+
+containerd config default | sudo tee /etc/containerd/config.toml >/dev/null 2>&1
+
+sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
+
+sudo systemctl restart containerd
 
 ```
