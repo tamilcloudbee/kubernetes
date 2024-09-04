@@ -128,3 +128,11 @@ sudo apt update && sudo apt install kubelet kubeadm kubectl -y
 
 
 ```
+
+## Intialize the Kubernetes Cluster in master node
+### Run the follwing command in master node to initialize Kubernetes Cluster
+
+```
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+
+```
