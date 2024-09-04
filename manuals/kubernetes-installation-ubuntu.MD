@@ -8,8 +8,8 @@
 | node2   |  172.51.51.70 | Ubuntu 24.04 LTS Server | 8  | 2 |
 
 
-### The following Block 1 & Block 2 & Block 3 is common for all 3 Nodes
-### NOTE : Change / Modify the host_name value when running the following block in different machines
+#### The following Block 1 & Block 2 & Block 3 & Block 3 is common for all 3 Nodes
+#### NOTE : Change / Modify the host_name value when running the following block in different machines
 
 ### Block 1
 ```
@@ -62,11 +62,11 @@ net.ipv4.ip_forward = 1
 EOT
 
 ```
-## Install Docker (CE) in all the nodes 
+#### Install Docker (CE) in all the nodes 
 
-### Follow installation steps given in the followin Docker website
+#### Follow installation steps given in the followin Docker website
 
-### Reference : https://docs.docker.com/engine/install/ubuntu/
+#### Reference : https://docs.docker.com/engine/install/ubuntu/
 
 ### Block 2
 
@@ -91,7 +91,7 @@ sudo apt-get update
 
 ```
 
-## Install and Configure Containerd
+#### Install and Configure Containerd
 
 ### Block 3 ( Perform the following steps in all 3 Nodes )
 
@@ -112,11 +112,11 @@ sudo systemctl restart containerd
 
 ```
 
-## Install kubectl kubeadm kubelet
+#### Install kubectl kubeadm kubelet
 
 ### Block 4 ( Perform the following steps in all 3 Nodes )
 
-### Reference https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management
+#### Reference https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management
 
 ```
 
@@ -130,22 +130,22 @@ sudo apt update && sudo apt install kubelet kubeadm kubectl -y
 ```
 
 ## Intialize the Kubernetes Cluster in master node
-### Run the follwing command in master node to initialize Kubernetes Cluster
+#### Run the follwing command in master node to initialize Kubernetes Cluster
 
 ```
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 
 ```
-### output for the above command 
+#### output for the above command 
 
 ![Kubernetes Cluster Initialization](../images/kubeadm-init-cluster.jpg)
 
-## Cluster Initialized Result
+#### Cluster Initialized Result
 ![Kubernetes Cluster Initialization Result](../images/kubeadm-init-result.jpg)
 
-## The Last screehot shows the message the Kubernetes cluster has been initialized
+#### The Last screehot shows the message the Kubernetes cluster has been initialized
 
-### To start using your cluster, you need to run the following as a regular user in the kubernetes master node:
+#### To start using your cluster, you need to run the following as a regular user in the kubernetes master node:
 
 ```
 
@@ -157,11 +157,11 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 
 ```
 
-## You should now deploy a pod network to the cluster.
-### Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+#### You should now deploy a pod network to the cluster.
+#### Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
   https://kubernetes.io/docs/concepts/cluster-administration/addons/
 
-### Refer the link above there are alot of addons available , i am going to use "flannel" networking in this demo run the following command in the kubernetes master node
+#### Refer the link above there are alot of addons available , i am going to use "flannel" networking in this demo run the following command in the kubernetes master node
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
@@ -169,13 +169,13 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 ```
 ![Kubernetes Cluster Flannel network](../images/kubectl-flannel.jpg)
 
-### After the above command run the following command in kubernetes master to view the pods running in 
+#### After the above command run the following command in kubernetes master to view the pods running in 
 
 ![Kubectl get pods After Flannel network](../images/kubectl-get-pods-after-flannel.jpg)
 
-## Run the following command on the worker nodes (node1 and node2 in my setup) to join the worker nodes to the kubernetes master / cluster.
+#### Run the following command on the worker nodes (node1 and node2 in my setup) to join the worker nodes to the kubernetes master / cluster.
 
-## Refer your output which you got when you initialized the cluster
+#### Refer your output which you got when you initialized the cluster
 
 
 ```
@@ -186,7 +186,7 @@ sudo kubeadm join 172.51.51.50:6443 --token tbqv3x.4ak1wnycmkc071dk \
 
 ![Kubeadm join node 1 and node 2](../images/kubeadm-join.jpg)
 
-### After running the above command in node1 and node2 , run the following command in kubernetes master
+#### After running the above command in node1 and node2 , run the following command in kubernetes master
 
 ```
 kubectl get nodes
@@ -194,7 +194,7 @@ kubectl get nodes
 
 ![Kubectl get nodes after join](../images/kubectl-get-nodes.jpg)
 
-### Kubernetes cluster hasbeen configured and node1 and node2 has been joined to the cluster.
+#### Kubernetes cluster hasbeen configured and node1 and node2 has been joined to the cluster.
 
 
 
