@@ -7,5 +7,5 @@
 | Topic   | Link |
 |------------|------------|
 | Pods |  [Refer to Pods Guide ](manuals/pods.MD)  |
-
-
+| Replicas | [ Refer to Replicas Guide ](manuals/replicas.MD) |
+| Deplyment | [ Refer to Deployment Guide ](manuals/deployment.MD) |
