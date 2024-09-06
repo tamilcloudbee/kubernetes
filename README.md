@@ -3,3 +3,9 @@
 
 [Refer to Kubernetes Installation Guide for Ubuntu](manuals/kubernetes-installation-ubuntu.MD) 
 
+
+| Topic   | Link |
+|------------|------------|
+| Pods |  [Refer to Pods Guide ](manuals/pods.MD)  |
+
+
