@@ -1,27 +1,3 @@
-
-```markdown
-# Kubernetes Deployment Example: Nginx
-
-This document provides a simple guide on how to create, manage, and scale a **Deployment** in Kubernetes to run an **Nginx** web server with 3 replicas.
-
-## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Creating the Deployment](#creating-the-deployment)
-- [Managing the Deployment](#managing-the-deployment)
-  - [Scaling the Deployment](#scaling-the-deployment)
-  - [Updating the Deployment](#updating-the-deployment)
-  - [Rollback the Deployment](#rollback-the-deployment)
-- [Verifying the Deployment](#verifying-the-deployment)
-- [Accessing the Nginx Application](#accessing-the-nginx-application)
-- [Additional Resources](#additional-resources)
-
-## Prerequisites
-
-Before proceeding, ensure you have the following:
-
-- A running **Kubernetes cluster**.
-- **kubectl** installed and configured to interact with your cluster.
-
 ## Creating the Deployment
 
 Follow these steps to create a Kubernetes Deployment for an Nginx web server with 3 replicas.
