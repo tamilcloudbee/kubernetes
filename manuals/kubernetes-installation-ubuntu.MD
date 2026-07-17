@@ -90,6 +90,18 @@ sudo apt-get update
 
 
 ```
+# Install Kubernetes CNI Plugins
+
+```
+
+sudo mkdir -p /opt/cni/bin
+
+VERSION=v1.5.1
+
+curl -LO https://github.com/containernetworking/plugins/releases/download/${VERSION}/cni-plugins-linux-amd64-${VERSION}.tgz
+
+sudo tar -C /opt/cni/bin -xzf cni-plugins-linux-amd64-${VERSION}.tgz
+```
 
 #### Install and Configure Containerd
 
