@@ -90,7 +90,7 @@ sudo apt-get update
 
 
 ```
-# Install Kubernetes CNI Plugins
+## Install Kubernetes CNI Plugins ( Perform the following steps in all 3 Nodes )
 
 ```
 
